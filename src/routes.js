@@ -1,3 +1,7 @@
+import { Database } from "./database.js"
+
+const database = new Database()
+
 export const routes = [
     {
         method: 'GET',
@@ -20,7 +24,10 @@ export const routes = [
                 created_at: new Date(),
                 updated_at: new Date()
             }
+            
+            database.insert('tasks', task)
 
+            return res.writeHead(201).end()
         }
     },
     {
