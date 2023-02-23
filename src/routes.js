@@ -12,7 +12,12 @@ export const routes = [
         handler: (req, res) => {
             
         }
+    },
+    {
+        method: 'PUT',
+        path:'/tasks/:id',
+        handler: (req, res) => {
+            
+        }
     }
-
-
 ]
