@@ -19,5 +19,12 @@ export const routes = [
         handler: (req, res) => {
             
         }
+    },
+    {
+        method: 'DELETE',
+        path:'/tasks/:id',
+        handler: (req, res) => {
+            
+        }
     }
 ]
