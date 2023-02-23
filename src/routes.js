@@ -1,5 +1,5 @@
-import { Database } from "./database.js"
-
+import { Database } from './database.js'
+import { randomUUID } from 'node:crypto'
 const database = new Database()
 
 export const routes = [
@@ -17,7 +17,7 @@ export const routes = [
             const { title , description } = req.body
             
             const task = {
-                id: 1,
+                id: randomUUID(),
                 title,
                 description,
                 completed_at: new Date(),
