@@ -5,6 +5,14 @@ export const routes = [
         handler: (req, res) => {
             
         }
+    },
+    {
+        method: 'POST',
+        path:'/tasks',
+        handler: (req, res) => {
+            
+        }
     }
+
 
 ]

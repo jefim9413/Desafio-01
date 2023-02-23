@@ -15,6 +15,4 @@ export class Database {
     #persist(){
         fs.writeFile(databasePath, JSON.stringify(this.#database, null, 2))
     }
-
-
 }
