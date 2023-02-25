@@ -15,6 +15,7 @@ export class Database {
     #persist(){
         fs.writeFile(databasePath, JSON.stringify(this.#database, null, 2))
     }
+    
     insert(table,data) {
         if(Array.isArray(this.#database[table])){
             this.#database[table].push(data)
@@ -24,6 +25,23 @@ export class Database {
 
         this.#persist()
 
+        return data
+    }
+
+    select(table,search){
+        let data = this.#database[table] ?? []
+
+        if(search){
+            data = data.filter(row => {
+                return Object.entries(search).some((key,value)=>{
+                    if(!value){
+                        return true
+                    }
+
+                    return row[key].includes(value)
+                })
+            })
+        }
         return data
     }
 
