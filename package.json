@@ -9,5 +9,8 @@
   },
   "keywords": [],
   "author": "Jefferson Marques <jefferson.jsm3444@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "csv-parse": "^5.3.5"
+  }
 }
